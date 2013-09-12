@@ -1,0 +1,58 @@
+<div class="control-group">
+    <label class="control-label" for="Content_category">Category
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <select name="category_id" id="Content_category" class="m-wrap span6" ng-model="content.category_id">
+            <option value="">Please Select</option>
+            <option value="1">News</option>
+            <option value="2">Events</option>
+            <option value="3">Knowledge</option>
+            <option value="4">FAQ</option>
+            <!--<option value="5">Reference</option>-->
+            <!--<option value="6">About Us</option>-->
+        </select>
+    </div>
+</div>
+<div class="control-group">
+    <label for="thumb" class="control-label">Thumb
+    </label>
+    <div class="controls">
+        <div class="input-append">
+            <input class="span12 m-wrap" id="thumb" name="thumb" type="text" ng-model="content.thumb">
+            <button onclick="window.open('/elfinder/elfinder_angular.html?selector=thumb&objstr=content.thumb', 'childWindow', 'width=800,height=600');" class="btn" type="button">Select File</button>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="control-group">
+    <label for="img" class="control-label">Header Image</label>
+    <div class="controls">
+        <div class="input-append">
+            <input class="span12 m-wrap" name="img" id="img" ng-model="content.img" type="text">
+            <button onclick="window.open('/elfinder/elfinder_angular.html?selector=img&objstr=content.img', 'childWindow', 'width=800,height=600');" class="btn" type="button">Select File</button>
+        </div>
+    </div>
+</div>
+<div class="control-group">
+    <label for="Content_title" class="control-label">Title
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <input id="Content_title" type="text" name="title" class="m-wrap span6" ng-model="content.title">
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">
+        Short Description
+    </label>
+    <div class="controls">
+        <textarea id="short" name="short" ng-model="content.short" class="span12 m-wrap" rows="6"></textarea>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Content</label>
+    <div class="controls">
+        <textarea id="content" name="content" ckeditor ng-model="content.content" class="span12 m-wrap" rows="6"></textarea>
+    </div>
+</div>

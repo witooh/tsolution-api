@@ -1,0 +1,19 @@
+<div class="control-group">
+    <label for="Brand_name" class="control-label">Name
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <input id="Brand_name" type="text" name="name" class="m-wrap span6" ng-model="series.name">
+    </div>
+</div>
+
+<div class="control-group">
+    <label for="User_name" class="control-label">Brand
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <select name="brand_id" id="Brand_type" class="m-wrap span6" ng-model="series.brand_id" ng-options="brand.id as brand.name for brand in brandList">
+            <option value="">Please Select</option>
+        </select>
+    </div>
+</div>

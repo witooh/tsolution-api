@@ -1,0 +1,49 @@
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+	"require": {
+		"laravel/framework": "4.0.*",
+        "witooh/validators": "dev-master",
+        "witooh/permission": "dev-master",
+        "witooh/basic-message": "dev-master",
+        "witooh/authenticate": "dev-master",
+        "witooh/grid-dataprovider": "dev-master",
+        "jasonlewis/expressive-date": "1.*",
+        "philo/laravel-twitter": "dev-master"
+	},
+    "require-dev": {
+        "mockery/mockery": "dev-master",
+        "barryvdh/laravel-ide-helper": "dev-master"
+    },
+	"autoload": {
+		"classmap": [
+			"app/commands",
+			"app/controllers",
+			"app/models",
+			"app/database/migrations",
+			"app/database/seeds",
+			"app/tests/TestCase.php",
+            "app/domains",
+            "app/validators",
+            "app/events",
+            "app/repositories",
+            "app/AppServiceProvider.php"
+		]
+	},
+	"scripts": {
+		"pre-update-cmd": [
+			"php artisan clear-compiled"
+		],
+		"post-install-cmd": [
+			"php artisan optimize"
+		],
+		"post-update-cmd": [
+			"php artisan optimize"
+		]
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "dev"
+}

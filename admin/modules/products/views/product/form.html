@@ -1,0 +1,115 @@
+<div class="control-group">
+    <label for="Product_name" class="control-label">Name
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <input id="Product_name" type="text" name="name" class="m-wrap span6" ng-model="product.name">
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="Product_brand">Brand
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <select name="brand_id" id="Product_brand" class="m-wrap span6"
+                ng-model="product.brand_id"
+                ng-options="brand.id as brand.name for brand in brandList">
+            <option value="">Please Select</option>
+        </select>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="Product_series">Series
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <select name="series_id" id="Product_series" class="m-wrap span6"
+                ng-model="product.series_id"
+                ng-options="series.id as series.name for series in seriesList | seriesByBrandId:product.brand_id">
+            <option value="">Please Select</option>
+        </select>
+    </div>
+</div>
+<!--<div class="control-group">-->
+    <!--<label class="control-label">Product Image</label>-->
+    <!--<div class="controls">-->
+        <!--<div>-->
+            <!--<div class="thumbnail margin-bottom-10" style="width: 200px; height: 150px;">-->
+                <!--<img id="preview_img" style="width: 200px;height: 150px;">-->
+                <!--{{product.img | showImg:"#preview_img"}}-->
+                <!--<script>Holder.run();</script>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<a-->
+                        <!--onclick="window.open('/elfinder/elfinder_angular.html?selector=Product_img&objstr=product.img', 'childWindow', 'width=800,height=600');"-->
+                        <!--class="btn btn-file">Select image</a>-->
+                <!--<button class="btn btn-file" ng-click="removeImg()">Remove</button>-->
+                <!--<input name="img" value="{{product.img}}" id="Product_img" type="hidden" ng-model="product.img"/>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="control-group">
+    <label for="thumb" class="control-label">Thumb
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <div class="input-append">
+            <input class="span12 m-wrap" id="thumb" name="thumb" type="text" ng-model="product.thumb">
+            <button onclick="window.open('/elfinder/elfinder_angular.html?selector=thumb&objstr=product.thumb', 'childWindow', 'width=800,height=600');" class="btn" type="button">Select File</button>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="control-group">
+    <label for="img" class="control-label">Header Image
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <div class="input-append">
+            <input class="span12 m-wrap" name="img" id="img" ng-model="product.img" type="text">
+            <button onclick="window.open('/elfinder/elfinder_angular.html?selector=img&objstr=product.img', 'childWindow', 'width=800,height=600');" class="btn" type="button">Select File</button>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Introduction
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <textarea name="intro" ckeditor ng-model="product.intro" class="span12 m-wrap" rows="6"></textarea>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Detail
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <textarea name="detail" ckeditor ng-model="product.detail" class="span12 m-wrap" rows="6"></textarea>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Feature</label>
+    <div class="controls">
+        <textarea name="feature" ckeditor ng-model="product.feature" class="span12 m-wrap" rows="6"></textarea>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Specification</label>
+    <div class="controls">
+        <textarea name="spec" ckeditor ng-model="product.spec" class="span12 m-wrap" rows="6"></textarea>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">System Requirement</label>
+    <div class="controls">
+        <textarea name="require" ckeditor ng-model="product.require" class="span12 m-wrap" rows="6"></textarea>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Download</label>
+    <div class="controls">
+        <textarea name="download" ckeditor ng-model="product.download" class="span12 m-wrap" rows="6"></textarea>
+    </div>
+</div>

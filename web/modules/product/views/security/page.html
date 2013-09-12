@@ -1,0 +1,57 @@
+<!-- **Breadcrumb** -->
+<section class="breadcrumb-section">
+    <div class="container">
+        <div class="breadcrumb">
+            <a ng-href="#/"> Home </a>
+            <span class="icon-chevron-right"> </span>
+            <a ng-href="#/product/security"> Security </a>
+            <span class="icon-chevron-right"> </span>
+            <a ng-href="#/product/security/{{content.url}}"> {{content.brand_name}} </a>
+            <span class="icon-chevron-right"> </span>
+            <h1> {{content.series_name}} </h1>
+
+        </div>
+        <div class="main-phone-no">
+            <p> +66-2-5700444 <br> <a href="mailto:info@tsolutions.co.th" title=""> info@tsolutions.co.th </a> </p>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section id="primary" class="content-full-width">
+
+        <!-- **Product** -->
+        <div class="product">
+            <div class="images">
+                <a> <img ng-src="{{content.img}}" alt="" title=""> </a>
+            </div>
+            <div class="summary">
+                <h2>{{content.name}}</h2>
+                <div class="description">
+                    <p ng-bind-html-unsafe="content.intro"></p>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="woocommerce-tabs" style="float: none;">
+                <!-- **Tabs Container** -->
+                <div class="tabs-container">
+                    <ul class="tabs-frame">
+                        <li class="active"><a href="#detail" data-toggle="tab"> Product Details </a></li>
+                        <li ng-show="content.feature"><a href="#feature" data-toggle="tab"> Features </a></li>
+                        <li ng-show="content.feature"><a href="#spec" data-toggle="tab"> Specification </a></li>
+                        <li ng-show="content.feature"><a href="#require" data-toggle="tab"> System Requirement </a></li>
+                        <li ng-show="content.feature"><a href="#download" data-toggle="tab"> Download </a></li>
+                    </ul>
+                    <div class="tab-content" style="display: block;">
+                        <div class="tabs-frame-content tab-pane active" id="detail" ng-bind-html-unsafe="content.detail"></div>
+                        <div class="tabs-frame-content tab-pane" id="feature" ng-bind-html-unsafe="content.feature"></div>
+                        <div class="tabs-frame-content tab-pane" id="spec" ng-bind-html-unsafe="content.spec"></div>
+                        <div class="tabs-frame-content tab-pane" id="require" ng-bind-html-unsafe="content.require"></div>
+                        <div class="tabs-frame-content tab-pane" id="download" ng-bind-html-unsafe="content.download"></div>
+                    </div>
+                </div><!-- **Tabs Container - End** -->
+            </div>
+        </div>
+
+    </section>
+</div>

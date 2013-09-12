@@ -1,0 +1,45 @@
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+            Request From Dealer
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home"></i>
+                <a ng-href="#/home">Home</a>
+
+                <i class="icon-angle-right"></i>
+            </li>
+            <li><a ng-href="#/dealer/file">Request From Dealer</a></li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row-fluid">
+    <div class="span12">
+        <div class="row-fluid">
+            <div class="row-fluid search-forms search-default">
+                <form class="form-search">
+                    <div class="chat-form">
+                        <div class="input-cont">
+                            <input type="text" placeholder="Search..." class="m-wrap" ng-model="find.title">
+                        </div>
+                        <button ng-click="search()" type="submit" class="btn green">
+                            Search &nbsp;
+                            <i class="m-icon-swapright m-icon-white"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <table id="table"><tr><td></td></tr></table>
+        <div id="pager"></div>
+        <div class="margin-bottom-25"></div>
+    </div>
+</div>
+
+<div modal modal-id="confirmModal" modal-click="remove()" modal-body="Are you sure to delete?"></div>
+

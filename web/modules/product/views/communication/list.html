@@ -1,0 +1,57 @@
+<!-- **Breadcrumb** -->
+<section class="breadcrumb-section">
+    <div class="container">
+        <div class="breadcrumb">
+            <a ng-href="#/"> Home </a>
+            <span class="icon-chevron-right"> </span>
+            <a ng-href="#/product/communication"> Communication </a>
+            <span ng-show="curBrandName" class="icon-chevron-right"> </span>
+
+            <h1> {{curBrandName}} </a></h1>
+        </div>
+        <div class="main-phone-no">
+            <p> +66-2-5700444 <br> <a href="mailto:info@tsolutions.co.th" title=""> info@tsolutions.co.th </a></p>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section id="secondary" class="left-sidebar">
+        <aside class="widget widget_categories">
+            <h3 class="widgettitle"><a href="" title=""> Brand </a></h3>
+            <ul id="brand-list">
+                <li ng-repeat="brand in brandList"><a ng-href="#/product/communication/{{brand.url}}" style="cursor: pointer">{{ brand.name }}</a></li>
+            </ul>
+        </aside>
+    </section>
+    <section id="primary">
+
+        <div class="sorting-container">
+            <a href="javascript:;" title="" class="active-sort" data-filter=".all-sort"> All </a>
+            <a href="javascript:;" ng-repeat="series in seriesList" data-filter=".sid{{series.id}}">{{series.name}}</a>
+        </div>
+
+        <div class="portfolio-container gallery">
+            <div ng-repeat="product in productList" class="isotope-item portfolio four-column-with-sidebar all-sort sid{{product.series_id}}">
+                <a ng-href="#/product/communication/{{curBrandUrl}}/{{product.series_url}}/{{product.product_url}}/{{product.id}}" title="">
+                <div class="portfolio-thumb">
+                    <img ng-src="{{product.img}}" alt="" title="">
+                    <div class="image-overlay">
+
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <h5>{{product.name}}</h5>
+
+                    <!--<p> Pellentesque habitant </p>-->
+                </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+        <div class="hr-invisible-small"></div>
+
+    </section>
+</div>

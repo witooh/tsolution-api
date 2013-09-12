@@ -1,0 +1,93 @@
+<!-- BEGIN SIDEBAR MENU -->
+<ul class="page-sidebar-menu">
+    <li>
+        <div class="sidebar-toggler hidden-phone"></div>
+    </li>
+    <!--<li class="start" ng-class="{active: routeMatch('#/home')}">-->
+        <!--<a ng-href="#/home">-->
+            <!--<i class="icon-home"></i>-->
+            <!--<span class="title">Dashboard</span>-->
+        <!--</a>-->
+
+    <!--</li>-->
+    <li class="start" ng-class="{active: routeMatch('#/content*')}">
+        <a ng-href="#/content">
+            <i class="icon-edit"></i>
+            <span class="title">Content Manager</span>
+        </a>
+    </li>
+    <li ng-class="{active: routeMatch('#/products*')}">
+        <a href="javascript:;">
+            <i class="icon-shopping-cart"></i>
+            <span class="title">Product Manager</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li ng-class="{active: routeMatch('#/products/brand')}">
+                <a ng-href="#/products/brand">Brands</a>
+            </li>
+            <li ng-class="{active: routeMatch('#/products/series')}">
+                <a ng-href="#/products/series">Series</a>
+            </li>
+            <li ng-class="{active: routeMatch('#/products/product')}">
+                <a ng-href="#/products/product">Products</a>
+            </li>
+        </ul>
+    </li>
+    <li ng-class="{active: routeMatch('#/dealer*')}">
+        <a href="javascript:;">
+            <i class="icon-briefcase"></i>
+            <span class="title">Dealer</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li ng-class="{active: routeMatch('#/dealer/announce')}">
+                <a ng-href="#/dealer/announce">Announcement</a>
+            </li>
+            <li ng-class="{active: routeMatch('#/dealer/file')}">
+                <a ng-href="#/dealer/file">Download File</a>
+            </li>
+            <li ng-class="{active: routeMatch('#/dealer/request')}">
+                <a ng-href="#/dealer/request">Request</a>
+            </li>
+        </ul>
+    </li>
+    <li ng-class="{active: routeMatch('#/static*')}">
+        <a href="javascript:;">
+            <i class="icon-edit"></i>
+            <span class="title">Static Contents</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <!--<li ng-class="{active: routeMatch('#/static/knowledge')}">-->
+                <!--<a ng-href="#/static/knowledge">Knowledge</a>-->
+            <!--</li>-->
+            <!--<li ng-class="{active: routeMatch('#/static/faq')}">-->
+                <!--<a ng-href="#/static/faq">FAQ</a>-->
+            <!--</li>-->
+            <li ng-class="{active: routeMatch('#/static/reference')}">
+                <a ng-href="#/static/reference">Reference</a>
+            </li>
+            <!--<li ng-class="{active: routeMatch('#/static/aboutus')}">-->
+                <!--<a ng-href="#/static/aboutus">About us</a>-->
+            <!--</li>-->
+        </ul>
+    </li>
+    <li ng-class="{active: routeMatch('#/file')}">
+        <a ng-href="#/file">
+            <i class="icon-folder-close"></i>
+            <span class="title">File Manager</span>
+        </a>
+    </li>
+    <li ng-class="{active: routeMatch('#/user')}">
+        <a ng-href="#/user">
+            <i class="icon-user"></i>
+            <span class="title">User Manager</span>
+        </a>
+    </li>
+</ul>
+
+<script>
+    Metronic.run();
+</script>
+<!-- END SIDEBAR MENU -->

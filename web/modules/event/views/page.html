@@ -1,0 +1,38 @@
+<!-- **Breadcrumb** -->
+<section class="breadcrumb-section">
+    <div class="container">
+        <div class="breadcrumb">
+            <a ng-href="#/"> Home </a>
+            <span class="icon-chevron-right"> </span>
+            <h1> <a href="#/event" style="font-size: 24px;">Event</a></h1>
+        </div>
+        <div class="main-phone-no">
+            <p> +66-2-5700444 <br> <a href="mailto:info@tsolutions.co.th" title=""> info@tsolutions.co.th </a> </p>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section id="primary" class="content-full-width">
+        <div class="blog-single-entry">
+            <div class="blog-entry">
+                <div class="entry-thumb-meta">
+                    <div class="entry-thumb">
+                        <img show-img-blog="content.img" alt="" title="">
+                    </div>
+                </div>
+                <div class="entry-details">
+                    <div class="entry-title">
+                        <h4>{{content.title}}</h4>
+                    </div>
+                    <div class="entry-metadata">
+                        <span class="icon-calendar"></span><a> {{content.created_at | date: 'longDate'}}</a>
+                    </div>
+                    <div class="entry-body">
+                        <div ng-bind-html-unsafe="content.content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

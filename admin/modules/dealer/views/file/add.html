@@ -1,0 +1,39 @@
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+            Add Download File
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home"></i>
+                <a ng-href="#/home">Home</a>
+
+                <i class="icon-angle-right"></i>
+            </li>
+            <li>
+                <a ng-href="#/dealer/file">Download File Manager</a>
+                <i class="icon-angle-right"></i>
+            </li>
+            <li><a ng-href="#/dealer/file/add">Add Download File</a></li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row-fluid">
+    <div class="span12">
+        <div class="row-fluid">
+            <form id="form" class="form form-horizontal">
+                <fieldset>
+                    <div class="row-fluid" ui-view="form"></div>
+                </fieldset>
+                <div class="form-actions">
+                    <button ng-click="save()" type="submit" class="btn blue"><i class="icon-ok"></i> Add</button>
+                    <a href="#/dealer/file" class="btn">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="control-group">
+    <label for="User_email" class="control-label">E-Mail
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <input id="User_email" type="text" name="name" class="m-wrap span6" ng-model="account.email">
+    </div>
+</div>
+<div class="control-group">
+    <label for="User_name" class="control-label">Name
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <input id="User_name" type="text" name="email" class="m-wrap span6" ng-model="account.name">
+    </div>
+</div>
+<div class="control-group">
+    <label for="User_pass" class="control-label">Password
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <input id="User_pass" type="password" name="password" class="m-wrap span6" ng-model="account.password">
+    </div>
+</div>
+<div class="control-group">
+    <label for="User_company" class="control-label">Company Name</label>
+    <div class="controls">
+        <input id="User_company" type="text" name="company_name" class="m-wrap span6" ng-model="account.company_name">
+    </div>
+</div>
+<div class="control-group">
+    <label for="User_name" class="control-label">Admin Account ?</label>
+    <div class="controls">
+        <div toggle-btn="account.is_admin" toggle-btn-name="is_admin"></div>
+    </div>
+</div>

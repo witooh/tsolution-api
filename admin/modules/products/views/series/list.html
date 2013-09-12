@@ -1,0 +1,77 @@
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+            Series
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home"></i>
+                <a ng-href="#/home">Home</a>
+
+                <i class="icon-angle-right"></i>
+            </li>
+            <li><a ng-href="#/products/series">Series</a></li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row-fluid">
+    <div class="span12">
+        <div class="row-fluid">
+            <form class="horizontal-form">
+                <div class="row-fluid">
+                    <div class="span6 ">
+                        <div class="control-group">
+                            <label class="control-label" for="Brand_name">Series</label>
+                            <div class="controls">
+                                <input type="text" id="Brand_name" class="m-wrap span12" ng-model="find.query">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6 ">
+                        <div class="control-group">
+                            <label class="control-label" for="Brand_type">Product Type</label>
+                            <div class="controls">
+                                <select name="brand_type" id="Brand_type" class="m-wrap span12" ng-model="find.brand_type">
+                                    <option value="">All</option>
+                                    <option value="Security">Security</option>
+                                    <option value="Communication">Communication</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6 ">
+                        <div class="control-group">
+                            <label class="control-label" for="Series_brand">Brand</label>
+                            <div class="controls">
+                                <select name="brand_name" id="Series_brand" class="m-wrap span12"
+                                        ng-model="find.brand_id"
+                                        ng-options="brand.id as brand.name for brand in brandList | filter:find.brand_type">
+                                    <option value="">All</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions" style="text-align: center">
+                    <button type="submit" class="btn green" ng-click="search()">Search <i class="m-icon-swapright m-icon-white"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="row-fluid margin-bottom-15">
+            <a ng-href="#/products/series/add" class="btn blue"><i class="icon-plus"></i> Add Series</a>
+            <button ng-click="confirmDelete()" class="btn red"><i class="icon-trash"></i> Delete</button>
+        </div>
+        <table id="table"><tr><td></td></tr></table>
+        <div id="pager"></div>
+        <div class="margin-bottom-25"></div>
+    </div>
+</div>
+
+<div modal modal-id="confirmModal" modal-click="remove()" modal-body="Are you sure to delete?<br>If you delete the Series, Product which be related will be lost."></div>
+

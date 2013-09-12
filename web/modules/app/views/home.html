@@ -1,0 +1,79 @@
+<div class="container">
+    <section id="primary">
+
+        <div class="column one-column with-sidebar blog-thumb">
+            <div ng-repeat="content in newsList">
+                <div class="column one-column blog-thumb">
+                    <!-- **Blog Entry** -->
+                    <article class="blog-entry">
+                        <div class="entry-thumb-meta">
+                            <div class="entry-thumb">
+                                <img show-thumb-blog="content.thumb" alt="" title="">
+                            </div>
+                            <div class="entry-meta">
+                                <div class="date">
+                                    <span class="icon-calendar"> </span>
+                                    <p> {{content.created_at | date: 'longDate'}} </p>
+                                </div>
+                                <span class="rounded-bend"> </span>
+                            </div>
+                        </div>
+
+                        <div class="entry-details">
+                            <div class="entry-title">
+                                <h4> <a ng-href="#/news/{{content.id}}" title="">{{content.title}}</a> </h4>
+                            </div>
+
+                            <div class="entry-body">
+                                <p show-short-blog>{{content.short}}</p>
+                                <a ng-href="#/news/{{content.id}}" title="" class="read-more"> Read More <span class="icon-double-angle-right"> </span> </a>
+                            </div>
+                        </div>
+                    </article><!-- **Blog Entry - End** -->
+                    <div class="hr"> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="secondary">
+        <aside class="widget" ng-show="eventList.length">
+            <h3 class="widgettitle"><a href="#/event">Event</a></h3>
+            <ul class="recent-posts-widget">
+                <li ng-repeat="content in eventList">
+                    <h6><a ng-href="#/event/{{content.id}}" title="">{{content.title}}</a></h6>
+                    <p>{{content.short}}</p>
+                </li>
+            </ul>
+        </aside>
+        <aside class="widget" ng-show="eventList.length">
+            <h3 class="widgettitle"><a href="#/knowledge">Knowledge</a></h3>
+            <ul class="recent-posts-widget">
+                <li ng-repeat="content in knowledgeList">
+                    <h6><a ng-href="#/knowledge/{{content.id}}" title="">{{content.title}}</a></h6>
+                    <p>{{content.short}}</p>
+                </li>
+            </ul>
+        </aside>
+        <aside class="widget" ng-show="eventList.length">
+            <h3 class="widgettitle"><a href="#/knowledge">FAQ</a></h3>
+            <ul class="recent-posts-widget">
+                <li ng-repeat="content in faqList">
+                    <h6><a ng-href="#/faq/{{content.id}}" title="">{{content.title}}</a></h6>
+                    <p>{{content.short}}</p>
+                </li>
+            </ul>
+        </aside>
+        <aside class="widget" ng-show="eventList.length">
+            <h3 class="widgettitle"><a>Partner</a></h3>
+            <ul class="recent-posts-widget">
+                <li><h6><a href="http://www.ipcctvthailand.com/">IPCCTVTHAILAND</a></h6></li>
+                <li><h6><a href="http://www.nconferences.com/">nConferences</a></h6></li>
+                <li><h6><a href="http://www.tsolutions.co.th/">TSOLUTIONS COMPANY LIMITED</a></h6></li>
+            </ul>
+        </aside>
+        <aside class="widget" ng-show="eventList.length">
+            <h3 class="widgettitle"><a>Calendar</a></h3>
+            <div id="calendar" calendar></div>
+        </aside>
+    </section>
+</div>

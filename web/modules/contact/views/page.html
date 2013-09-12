@@ -1,0 +1,67 @@
+<!-- **Breadcrumb** -->
+<section class="breadcrumb-section">
+    <div class="container">
+        <div class="breadcrumb">
+            <a ng-href="#/"> Home </a>
+            <span class="icon-chevron-right"> </span>
+            <h1> Contact </h1>
+        </div>
+        <div class="main-phone-no">
+            <p> +66-2-5700444 <br> <a href="mailto:info@tsolutions.co.th" title=""> info@tsolutions.co.th </a> </p>
+        </div>
+    </div>
+</section><!-- **Breadcrumb** -->
+
+<div class="fullwidth-map">
+    <div id="map"> </div>
+</div>
+
+<!-- **Container** -->
+<div class="container">
+
+    <!-- **Primary Section** -->
+    <section id="primary" class="content-full-width">
+
+        <div class="column two-third">
+            <h3> Send us a message </h3>
+            <div class="message"></div>
+            <form id="contact-form">
+                <p class="column one-half">
+                    <input name="name" type="text" placeholder="Your Name" ng-model="name">
+                </p>
+
+                <p class="column one-half last">
+                    <input name="email" type="email" placeholder="Your Email" ng-model="email">
+                </p>
+
+                <p class="clear">
+                    <textarea name="message" placeholder="Your Message" cols="5" rows="3" ng-model="message"></textarea>
+                </p>
+
+                <p>
+                    <input name="submit" type="submit" value="Comment" ng-click="send()">
+                </p>
+            </form>
+        </div>
+
+        <div class="column one-third last">
+            <h3> Contact Details </h3>
+            <div class="contact-details" style="padding-bottom: 45px;">
+                <p>
+                    16/87-88 หมู่บ้านกลางเมือง<br/>
+                    เสนา-ลาดพร้าว ซอยลาดปลาเค้า 12<br/>
+                    แขวงจรเข้บัว เขตลาดพร้าว<br/>
+                    กรุงเทพฯ 10230
+                </p>
+                <p> <span class="icon-phone"> </span> <strong>เบอร์โทร</strong> :  +66-2-5700444</p>
+                <p> <span class="icon-phone"> </span> <strong>แฟกซ์</strong> : +66-2-5700442</p>
+                <p> <span class="icon-phone"> </span> <strong>Technical Hotline</strong> : 0839992488 </p>
+                <p> <span class="icon-envelope-alt"> </span> <strong>Email</strong> : <a href="mailto:info@tsolutions.co.th"> info@tsolutions.co.th </a> </p>
+
+
+            </div>
+        </div>
+
+    </section><!-- **Primary Section** -->
+
+</div><!-- **Container - End** -->

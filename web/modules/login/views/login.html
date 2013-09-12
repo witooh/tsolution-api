@@ -1,0 +1,32 @@
+<section class="breadcrumb-section">
+    <div class="container">
+        <div class="breadcrumb">
+            <a ng-href="#/"> Home </a>
+            <span class="icon-chevron-right"> </span>
+            <h1> <a href="#/dealer" style="font-size: 24px;">Dealer</a></h1>
+        </div>
+        <div class="main-phone-no">
+            <p> +66-2-5700444 <br> <a href="mailto:info@tsolutions.co.th" title=""> info@tsolutions.co.th </a> </p>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section id="primary" class="content-full-width">
+        <form id="login-form" class="form-vertical login-form">
+            <div class="column one-column alert alert-error" ng-class="login.showError">
+                <span>{{ login.error }}</span>
+            </div>
+            <div class="column one-column">
+                <label> Email <span class="required"> * </span> </label>
+                <input name="username" type="text" placeholder="Email" ng-model="login.username">
+            </div>
+            <div class="column one-column">
+                <label> Password <span class="required"> * </span> </label>
+                <input name="password" type="password" placeholder="Password" ng-model="login.password">
+            </div>
+            <div class="hr-invisible-small"> </div>
+            <input name="submit" type="submit" value="Login" ng-click="submit()">
+        </form>
+    </section>
+</div>

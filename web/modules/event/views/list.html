@@ -1,0 +1,54 @@
+<!-- **Breadcrumb** -->
+<section class="breadcrumb-section">
+    <div class="container">
+        <div class="breadcrumb">
+            <a ng-href="#/"> Home </a>
+            <span class="icon-chevron-right"> </span>
+
+            <h1> Event </h1>
+        </div>
+        <div class="main-phone-no">
+            <p> +66-2-5700444 <br> <a href="mailto:info@tsolutions.co.th" title=""> info@tsolutions.co.th </a></p>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section id="primary" class="content-full-width">
+        <div infinite-scroll='nextPage()' infinite-scroll-disabled='busy' infinite-scroll-distance='0'>
+            <div ng-repeat="content in contentList">
+                <div class="column one-column blog-thumb">
+                    <!-- **Blog Entry** -->
+                    <article class="blog-entry">
+                        <div class="entry-thumb-meta">
+                            <div class="entry-thumb">
+                                <img show-thumb-blog="content.thumb" alt="" title="">
+                            </div>
+                            <div class="entry-meta">
+                                <div class="date">
+                                    <span class="icon-calendar"> </span>
+                                    <p> {{content.created_at | date: 'longDate'}} </p>
+                                </div>
+                                <span class="rounded-bend"> </span>
+                            </div>
+                        </div>
+
+                        <div class="entry-details">
+                            <div class="entry-title">
+                                <h4> <a ng-href="#/event/{{content.id}}" title="">{{content.title}}</a> </h4>
+                            </div>
+
+                            <div class="entry-body">
+                                <p show-short-blog>{{content.short}}</p>
+                                <a ng-href="#/event/{{content.id}}" title="" class="read-more"> Read More <span class="icon-double-angle-right"> </span> </a>
+                            </div>
+                        </div>
+                    </article><!-- **Blog Entry - End** -->
+                    <div class="hr"> </div>
+                </div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div ng-show='busy'>Loading data...</div>
+    </section>
+</div>

@@ -1,0 +1,20 @@
+<div class="control-group">
+    <label for="Content_title" class="control-label">Title
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <input id="Content_title" type="text" name="title" class="m-wrap span6" ng-model="content.title">
+    </div>
+</div>
+<div class="control-group">
+    <label for="thumb" class="control-label">File
+        <span class="required">*</span>
+    </label>
+    <div class="controls">
+        <div class="input-append">
+            <input class="span12 m-wrap" id="file" name="file" type="text" ng-model="content.file">
+            <button onclick="window.open('/elfinder/elfinder_angular.html?selector=file&objstr=content.file', 'childWindow', 'width=800,height=600');" class="btn" type="button">Select File</button>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+            Add User
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home"></i>
+                <a href="#/home">Home</a>
+
+                <i class="icon-angle-right"></i>
+            </li>
+            <li>
+                <a href="#/user">User Manager</a>
+                <i class="icon-angle-right"></i>
+            </li>
+            <li><a href="#/user/add">Add User</a></li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row-fluid">
+    <div class="span12">
+        <div class="row-fluid">
+            <form id="form" class="form form-horizontal">
+                <fieldset>
+                    <div class="row-fluid">
+                        <div class="control-group">
+                            <label for="User_email" class="control-label">E-Mail
+                                <span class="required">*</span>
+                            </label>
+
+                            <div class="controls">
+                                <input id="User_email" type="text" name="email" class="m-wrap span6"
+                                       ng-model="account.email">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="User_name" class="control-label">Name
+                                <span class="required">*</span>
+                            </label>
+
+                            <div class="controls">
+                                <input id="User_name" type="text" name="name" class="m-wrap span6"
+                                       ng-model="account.name">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="User_pass" class="control-label">Password
+                                <span class="required">*</span>
+                            </label>
+
+                            <div class="controls">
+                                <input id="User_pass" type="password" name="password" class="m-wrap span6"
+                                       ng-model="account.password">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="User_company" class="control-label">Company Name</label>
+
+                            <div class="controls">
+                                <input id="User_company" type="text" name="company_name" class="m-wrap span6"
+                                       ng-model="account.company_name">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="User_phone" class="control-label">Phone</label>
+                            <div class="controls">
+                                <input id="User_phone" type="text" name="phone" class="m-wrap span6" ng-model="account.phone">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="User_name" class="control-label">Admin Account ?</label>
+
+                            <div class="controls">
+                                <div toggle-btn="account.is_admin"
+                                     toggle-btn-name="is_admin"
+                                     toggle-btn-disable-label="No"
+                                     toggle-btn-enable-label="Yes">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-actions">
+                    <button ng-click="save()" type="submit" class="btn blue"><i class="icon-ok"></i> Add</button>
+                    <button back-btn>Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

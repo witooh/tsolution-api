@@ -1,0 +1,52 @@
+<!-- **Breadcrumb** -->
+<section class="breadcrumb-section">
+    <div class="container">
+        <div class="breadcrumb">
+            <a ng-href="#/"> Home </a>
+            <span class="icon-chevron-right"> </span>
+            <a> Dealer </a>
+            <span class="icon-chevron-right"> </span>
+            <h1> Announcement </h1>
+        </div>
+        <div class="main-phone-no">
+            <p> +66-2-5700444 <br> <a href="mailto:info@tsolutions.co.th" title=""> info@tsolutions.co.th </a></p>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section id="primary" class="content-full-width">
+        <div class="column one-third">
+            <div class="side-nav-container">
+                <ul>
+                    <li>
+                        <a ng-href="#/dealer/announce"> <span class="icon-envelope-alt"> </span> Announcement </a>
+                    </li>
+                    <li>
+                        <a ng-href="#/dealer/download"> <span class="icon-download-alt"> </span> Download File </a>
+                    </li>
+                    <li class="current_page_item">
+                        <a ng-href="#/dealer/support"> <span class="icon-pencil"> </span> Support </a>
+                    </li>
+                    <li>
+                        <a ng-href="#/logout"> <span class="icon-signout"> </span> Logout </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="column two-third last">
+            <form id="form">
+                <div class="column one-column">
+                    <label> Title <span class="required"> * </span> </label>
+                    <input name="title" type="text" ng-model="support.title">
+                </div>
+                <div class="column one-column">
+                    <label> Message <span class="required"> * </span> </label>
+                    <textarea name="message" ng-model="support.content"></textarea>
+                </div>
+                <div class="hr-invisible-small"> </div>
+                <input name="submit" type="submit" value="Submit" ng-click="submit()">
+            </form>
+        </div>
+    </section>
+</div>

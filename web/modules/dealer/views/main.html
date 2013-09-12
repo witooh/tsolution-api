@@ -1,0 +1,50 @@
+<!-- **Breadcrumb** -->
+<section class="breadcrumb-section">
+    <div class="container">
+        <div class="breadcrumb">
+            <a ng-href="#/"> Home </a>
+            <span class="icon-chevron-right"> </span>
+            <a> Dealer </a>
+            <span class="icon-chevron-right"> </span>
+            <h1> Announcement </h1>
+        </div>
+        <div class="main-phone-no">
+            <p> +66-2-5700444 <br> <a href="mailto:info@tsolutions.co.th" title=""> info@tsolutions.co.th </a></p>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section id="primary" class="content-full-width">
+        <div class="column one-third">
+            <div class="side-nav-container">
+                <ul>
+                    <li class="current_page_item">
+                        <a ng-href="#/dealer/announce"> <span class="icon-envelope-alt"> </span> Announcement </a>
+                    </li>
+                    <li>
+                        <a ng-href="#/dealer/download"> <span class="icon-download-alt"> </span> Download File </a>
+                    </li>
+                    <li>
+                        <a ng-href="#/dealer/support"> <span class="icon-pencil"> </span> Support </a>
+                    </li>
+                    <li>
+                        <a ng-href="#/logout"> <span class="icon-signout"> </span> Logout </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="column two-third last">
+            <!--<form>-->
+                <!--<input type="text" name="query">-->
+                <!--<button type="submit" class="btn">Search</button>-->
+            <!--</form>-->
+            <div ng-repeat="announce in annountList">
+                <div style="clear: both;font-size: 16px;padding: 10px 0;line-height: 24px;">
+                    <div style="width: 20%;float: left;">{{announce.created_at | date: 'longDate'}}</div>
+                    <div style="width: 60%;float: left;"><a ng-href="#/dealer/announce/{{announce.id}}">{{announce.title}}</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
